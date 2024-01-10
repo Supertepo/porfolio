@@ -1,14 +1,35 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Porfolio">
-	<main>
-		<h1>Porfolio</h1>
-	</main>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/106052507?s=96&v=4"
+        alt="Supertepo foto"
+      />
+
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl 
+		lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy ulises <a
+          href="https://www.linkedin.com/in/ulises-antonio-ruiz-silva/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white">
+        2 años de experiencia. Desarrollador Web. De Ciudad De Mexico, Mexico.
+        Especializado en soluciones unicas
+      </h2>
+      <ul></ul>
+    </section>
+  </main>
 </Layout>
 
-<style>
-
-</style>
+<style></style>
