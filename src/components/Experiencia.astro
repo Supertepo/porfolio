@@ -1,0 +1,29 @@
+---
+import ExperienciaItem from "./ExperienciaItem.astro";
+
+const Experice = [
+  {
+    latest: true,
+    date: "Mayo 2023",
+    title: "Org-Proyecto ONE",
+    description:
+      "Proyecto realizado en el transcurso de los cursos react de Oracle Next Education + Alura",
+  },
+  {
+    date: "Enero 2022",
+    title: "Tutorexpress",
+    description:
+      "Version de escritorio de un proyecto para seleccion de tutorias individuales para el CECyT 13 ",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    Experice.map((experience) => (
+      <li class="mb-10 ms-6">
+        <ExperienciaItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
