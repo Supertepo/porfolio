@@ -3,7 +3,7 @@ interface Props {
   title: string;
   date: string;
   description: string;
-  latest?:boolean;
+  latest?: boolean;
 }
 const { date, title, description, latest } = Astro.props;
 const visible = false;
@@ -25,7 +25,7 @@ const visible = false;
   </svg>
 </span>
 <h3
-  class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+  class="flex items-center mb-1 text-lg font-semibold text-yellow-200 mt-2"
 >
   {title}
   {
@@ -37,9 +37,9 @@ const visible = false;
   }
 </h3>
 <time
-  class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+  class="block mb-2 text-sm font-normal leading-none text-green-200/60"
   >{date}</time
 >
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-pretty">
   {description}
 </p>
