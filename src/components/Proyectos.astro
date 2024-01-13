@@ -1,24 +1,28 @@
 ---
 import CSharp from "./icons/CSharp.astro";
-
+import SQLServer from "./icons/SQLServer.astro";
 
 const TAGS = {
-  CSharp:{
-    name:"C#",
-    class: "bg-black text-violet-700",
+  CSharp: {
+    name: "C#",
+    class: "bg-[#8a2be236]	 text-white",
     icon: CSharp,
-
   },
-}
+  SQLServer: {
+    name: "Microsoft SQL Server",
+    class: "bg-[#331717ab] text-white",
+    icon: SQLServer,
+  },
+};
 const PROJECTS = [
   {
-    title: "Tutorexpress",
+    title: "Tutorexpress Escritorio",
     description:
       "Version de escritorio de un proyecto para seleccion de tutorias individuales para el CECyT 13 ",
     link: "#",
     github: "https://github.com/Supertepo/TutorExpress-escritorio",
-    image: "https://via.placeholder.com/300x200",
-    tags: [TAGS.CSharp, "SQL"],
+    image: "/Proyectos/TutorExpressD.webp",
+    tags: [TAGS.CSharp, TAGS.SQLServer],
   },
 ];
 ---
@@ -26,14 +30,27 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, tags, image }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
+      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
-      <img src={image} alt={title} />
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
     </article>
   ))
 }
