@@ -1,13 +1,24 @@
 ---
+import CSharp from "./icons/CSharp.astro";
+
+
+const TAGS = {
+  CSharp:{
+    name:"C#",
+    class: "bg-black text-violet-700",
+    icon: CSharp,
+
+  },
+}
 const PROJECTS = [
   {
-    title: "Proyecto 1",
+    title: "Tutorexpress",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate voluptatibus quidem quibusdam assumenda debitis labore sed repudiandae nobis ut a accusantium pariatur magni ea voluptatem ex eum, earum magnam vel?",
+      "Version de escritorio de un proyecto para seleccion de tutorias individuales para el CECyT 13 ",
     link: "#",
-    github: "#",
+    github: "https://github.com/Supertepo/TutorExpress-escritorio",
     image: "https://via.placeholder.com/300x200",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [TAGS.CSharp, "SQL"],
   },
 ];
 ---
